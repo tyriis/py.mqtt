@@ -76,7 +76,6 @@ class ConfiguredMQTTModule(ConfiguredModule):
         self.topics = set()
         self.callbacks = dict()
         #self.topics.add('$SYS/broker/uptime')
-        self.callbacks = dict()
         #client.connect("192.168.1.4", 1883, 60)
         #client.connect(host, port, keepalive)
         #client.loop_start()
@@ -117,7 +116,7 @@ class ConfiguredMQTTModule(ConfiguredModule):
 
                 def start(runner):
                     runner.client.connect(runner.host, runner.port, runner.keepalive)
-                    return self.client.loop_start()
+                    return runner.client.loop_start()
 
                 def stop(runner):
                     runner.client.disconnect()
