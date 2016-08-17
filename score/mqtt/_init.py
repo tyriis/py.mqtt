@@ -48,7 +48,6 @@ def init(confdict, ctx=None):
     Initializes this module acoording to :ref:`our module initialization
     guidelines <module_initialization>` with the following configuration keys:
     """
-    print(ctx)
     conf = defaults.copy()
     conf.update(confdict)
     if not conf['host']:
