@@ -34,6 +34,7 @@ setup(
     ],
     install_requires=[
         'score.init >= 0.3',
+        'score.ctx',
         'paho-mqtt'
     ]
 )

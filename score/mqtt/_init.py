@@ -48,10 +48,6 @@ class ConfiguredMQTTModule(ConfiguredModule):
         self.client.on_message = self.on_message
         self.topics = set()
         self.callbacks = dict()
-        #self.topics.add('$SYS/broker/uptime')
-        #client.connect("192.168.1.4", 1883, 60)
-        #client.connect(host, port, keepalive)
-        #client.loop_start()
 
     def on_connect(self, client, userdate, flags, rc):
         log.info('mqtt connected')
